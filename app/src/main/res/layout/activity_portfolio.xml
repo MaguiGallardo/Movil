@@ -17,30 +17,26 @@
             android:gravity="center"
             android:layout_marginBottom="24dp">
 
-            <FrameLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/circle_background"
-                android:padding="8dp">
-
-                <ImageView
-                    android:id="@+id/profileImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/profile_placeholder"
-                    android:scaleType="centerCrop"
-                    android:tint="#FFFFFF"/>
-
-            </FrameLayout>
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:src="@drawable/profile_photo"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circular_image"
+                android:padding="3dp"
+                android:clipToOutline="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"/>
 
             <TextView
                 android:id="@+id/nameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tu Nombre"
+                android:text="Magali Gallardo"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginTop="16dp"/>
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <!-- Contact Info Section -->
@@ -56,14 +52,14 @@
             android:id="@+id/emailText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="tu@email.com"
+            android:text="gallardomagui19@gmail.com"
             android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/phoneText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+1234567890"
+            android:text="3764657089"
             android:layout_marginBottom="24dp"/>
 
         <!-- Interests Section -->
@@ -95,7 +91,16 @@
             android:id="@+id/projectsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"/>
 
     </LinearLayout>
 </ScrollView> 
