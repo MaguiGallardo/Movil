@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center"
-    android:background="@color/white">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mi Portfolio"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="@color/purple_500"
-        android:layout_marginBottom="48dp"/>
-
-    <EditText
-        android:id="@+id/usernameInput"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:hint="Usuario"
-        android:inputType="text"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/edit_text_background"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/passwordInput"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/edit_text_background"/>
+        app:layout_constraintTop_toBottomOf="@id/usernameLayout"
+        app:passwordToggleEnabled="true">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Iniciar Sesión"
-        android:padding="12dp"/>
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/passwordLayout" />
 
-</LinearLayout> 
+</androidx.constraintlayout.widget.ConstraintLayout> 
